@@ -1,9 +1,9 @@
 <script>
-    let { name = 'Web 1' } = $props();
+    let { name = 'Web 1', image = "https://placehold.co/400" } = $props();
 </script>
 
 <div>
-    <img src="https://placehold.co/200" alt="Placeholder person">
+    <img src={image} alt="Placeholder person">
     <aside>
         <h3>{name}</h3>
         <ul>
@@ -23,5 +23,8 @@
         margin-bottom: 1em;
         padding: 1em;
         max-width: 400px;
+    }
+    img {
+        max-width: 200px;
     }
 </style>
